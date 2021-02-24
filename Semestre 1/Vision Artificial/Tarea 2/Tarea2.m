@@ -32,4 +32,4 @@ title("Rotated 180 Degrees");
 
 subplot(2,2,4); 
 imshow(blurredImage);
-title("Blured Image");
+title("Blurred Image");
