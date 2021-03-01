@@ -18,7 +18,6 @@ classdef CustomNoiseFilters
                 noisyImg(randi(y),randi(x)) = 0;
                 noisyImg(randi(y),randi(x)) = 255;
             end
-            %imshow(noisyImg)
         end
     end
 end
