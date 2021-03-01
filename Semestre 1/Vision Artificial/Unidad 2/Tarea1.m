@@ -1,14 +1,16 @@
+% The Following program calculates the histogram of an image and displays 
+% the calculated histogram comparing it with the build in matlab function
 img = imread('./imgs/grayscale/aerial.png');
 [y, x, channels] = size(img);
+% Check if image is a grayscale image
 if channels > 1
+    % Convert to grayscale
     img = rgb2gray(img);
     [y, x, channels] = size(img);
 end
 
 % Equalize image
 eq_img = histeq(img, 256);
-%img = imread('./imgs/lena/lena.png');
-%imshow(img)
 
 histArr = zeros(1, 256);
 colorArr = zeros(1, 256);
@@ -44,7 +46,6 @@ title("Calculated Histogram");
 subplot(2, 2, 4);
 imhist(img);
 title("Histogram with imhist");
-
 
 figure("Name", "Tarea 3 Figura 2")
 subplot(2, 2, 1);
