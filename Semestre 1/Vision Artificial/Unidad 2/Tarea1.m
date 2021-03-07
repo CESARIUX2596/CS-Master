@@ -30,7 +30,7 @@ end
 
 %colorbar('southoutside');
 %imhist(img);
-figure("Name", "Tarea 3 Figura 1")
+figure("Name", "Tarea 3 Figura 1", 'NumberTitle','off')
 
 subplot(2, 2, 1);
 imshow(img);
@@ -47,7 +47,7 @@ subplot(2, 2, 4);
 imhist(img);
 title("Histogram with imhist");
 
-figure("Name", "Tarea 3 Figura 2")
+figure("Name", "Tarea 3 Figura 2",'NumberTitle','off')
 subplot(2, 2, 1);
 imshow(img);
 title("Original image");
