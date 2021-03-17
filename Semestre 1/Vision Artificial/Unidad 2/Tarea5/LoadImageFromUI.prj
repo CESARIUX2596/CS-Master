@@ -1,0 +1,69 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="3996644797" file="/Users/cesariux2596/Repos/CS-Master/Semestre 1/Vision Artificial/Unidad 2/Tarea5/LoadImageFromUI.prj" location="/Users/cesariux2596/Repos/CS-Master/Semestre 1/Vision Artificial/Unidad 2/Tarea5" name="LoadImageFromUI" target="target.mlapps" target-name="Package App">
+    <param.appname>LoadImageFromUI</param.appname>
+    <param.authnamewatermark>Cesar Torres</param.authnamewatermark>
+    <param.email>me@cesartorres.org</param.email>
+    <param.company>Caos Corp</param.company>
+    <param.icon />
+    <param.icons />
+    <param.summary>Simple GUI with callbacks</param.summary>
+    <param.description />
+    <param.screenshot>/private/var/folders/6k/_9hm7xm93_jdl1x2c6v65yym0000gn/T/tpca542677_a182_45d6_990c_edc7057992d0.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>6470521e-f808-435c-90fb-9e781be67d68</param.guid>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.description />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}/LoadImageFromUI.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>/Users/cesariux2596/Repos/Computer-Science-Masters/Semester-1/Vision/imgs/color/Logo-01.png</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="/Users/cesariux2596/Repos/CS-Master/Semestre 1/Vision Artificial/Unidad 2" name="Tarea5" optional="false">/Users/cesariux2596/Repos/CS-Master/Semestre 1/Vision Artificial/Unidad 2/Tarea5</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/Applications/MATLAB_R2020b.app</root>
+      <toolboxes>
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>true</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.16</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>maci64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
