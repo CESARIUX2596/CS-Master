@@ -68,11 +68,11 @@ title(['Detected ' num2str(num_keys) ' keys']);
 figure("Name", "Unit 2, HW 6 Masks",'NumberTitle','off');
 subplot(1, 2, 1);
 imshow(coins_mask);
-title('Detected coins');
+title(['Detected ' num2str(num_coins) ' coins']);
 
 subplot(1, 2, 2);
 imshow(keys_mask);
-title('Detected keys');
+title(['Detected ' num2str(num_keys) ' keys']);
 
 figure("Name", "Unit 2, HW 6 counted of coins and keys",'NumberTitle','off');
 subplot(1, 1, 1);
