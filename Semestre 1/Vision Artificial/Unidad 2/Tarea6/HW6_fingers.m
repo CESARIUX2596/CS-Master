@@ -40,3 +40,29 @@ title('Palm mask');
 subplot(2, 2, 4);
 imshow(final);
 title(['Detected ' num2str(length(info)) ' Fingers']);
+
+figure("Name", "Unit 2, HW 6 Palm and Fingers",'NumberTitle','off');
+subplot(1, 2, 1);
+imshow(palm);
+title('Palm');
+
+subplot(1, 2, 2);
+imshow(final);
+title('Finguers');
+
+figure("Name", "Unit 2, HW 6, Finguers",'NumberTitle','off');
+subplot(1, 1, 1);
+imshow(img);
+hold on
+for k = 1 : length(info)
+     bb = info(k).BoundingBox;
+     rectangle('Position', [bb(1),bb(2),bb(3),bb(4)],'EdgeColor','b','LineWidth',2) ;
+     lbl_finger = text(bb(1)+15,bb(2),['finger #' num2str(k)]);
+     set(lbl_finger,'color','white','fontsize',15)
+end
+title('Detected Fingers');
+
+
+
+
+

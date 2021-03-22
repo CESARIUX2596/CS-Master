@@ -65,6 +65,30 @@ subplot(2, 2, 4);
 imshow(keys_mask);
 title(['Detected ' num2str(num_keys) ' keys']);
 
+figure("Name", "Unit 2, HW 6 Masks",'NumberTitle','off');
+subplot(1, 2, 1);
+imshow(coins_mask);
+title('Detected coins');
 
+subplot(1, 2, 2);
+imshow(keys_mask);
+title('Detected keys');
 
+figure("Name", "Unit 2, HW 6 counted of coins and keys",'NumberTitle','off');
+subplot(1, 1, 1);
+imshow(img);
+hold on
+for i = 1 : length(key_info)
+     bb_keys = key_info(i).BoundingBox;
+     rectangle('Position', [bb_keys(1),bb_keys(2),bb_keys(3),bb_keys(4)],'EdgeColor','b','LineWidth',2) ;
+     lbl_key = text(bb_keys(1)+15,bb_keys(2),['key #' num2str(i)]);
+     set(lbl_key,'color','white','fontsize',23)
+end
 
+for j = 1 : length(coins_info)
+     bb_coins = coins_info(j).BoundingBox;
+     rectangle('Position', [bb_coins(1),bb_coins(2),bb_coins(3),bb_coins(4)],'EdgeColor','r','LineWidth',2) ;
+     lbl_coin = text(bb_coins(1)+15,bb_coins(2),['coin #' num2str(j)]);
+     set(lbl_coin,'color','white','fontsize',23)
+end
+title('Detected items');
