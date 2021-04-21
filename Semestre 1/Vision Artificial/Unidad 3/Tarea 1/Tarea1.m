@@ -60,3 +60,21 @@ imshow(img4);
 subplot(1,2,2);
 imshow(gradient);
 title('Morphological Gradient');
+
+laplace = BorderDetector.laplace4(img4);
+figure('Name', 'Unit3, HW1 Laplace4','NumberTitle','off');
+subplot(1,2,1);
+title('Original image');
+imshow(img4);
+subplot(1,2,2);
+imshow(laplace);
+title('Laplace4');
+
+laplace = BorderDetector.laplace8(img4);
+figure('Name', 'Unit3, HW1 Laplace8','NumberTitle','off');
+subplot(1,2,1);
+title('Original image');
+imshow(img4);
+subplot(1,2,2);
+imshow(laplace);
+title('Laplace8');

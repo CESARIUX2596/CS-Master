@@ -105,6 +105,44 @@ classdef BorderDetector
             roberts_y=(abs(roberts_y))./max(max(roberts_y));
             roberts=(abs(roberts))./max(max(roberts));
         end
+       
+        function laplace = laplace4(img)
+            try
+                img =rgb2gray(img);
+            end
+            img = double(img);
+            tmp = img;
+            [x,y]=size(img);
+            laplace = zeros(x,y);
+            img = padarray(img,[1 1],0,'both'); 
+            for i=2:x-1
+                for j=2:y-1
+                    laplace(i,j)=img(i,j-1)+img(i-1,j)+img(i+1,j)+ img(i,j+1)-4*img(i,j);
+                end
+            end
+            laplace = tmp-laplace;
+            laplace=(abs(laplace))./max(max(laplace));
+        end
+        
+         
+        function laplace = laplace8(img)
+            try
+                img =rgb2gray(img);
+            end
+            img = double(img);
+            tmp = img;
+            [x,y]=size(img);
+            laplace = zeros(x,y);
+            img = padarray(img,[1 1],0,'both'); 
+            for i=2:x-1
+                for j=2:y-1
+                    laplace(i,j)= img(i-1,j-1) + img(i,j-1) + img(i+1,j-1)+ img(i-1,j) - 8*(img(i,j)) + img(i+1,j)+ img(i-1,j+1) + img(i,j+1) + img(i+1,j+1);
+                end
+            end
+            laplace = tmp-laplace;
+            laplace=(abs(laplace))./max(max(laplace));
+        end
+        
         
     end
 end
