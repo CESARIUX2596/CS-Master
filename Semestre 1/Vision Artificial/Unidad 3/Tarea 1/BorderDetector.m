@@ -123,8 +123,7 @@ classdef BorderDetector
             laplace = tmp-laplace;
             laplace=(abs(laplace))./max(max(laplace));
         end
-        
-         
+           
         function laplace = laplace8(img)
             try
                 img =rgb2gray(img);
@@ -142,7 +141,5 @@ classdef BorderDetector
             laplace = tmp-laplace;
             laplace=(abs(laplace))./max(max(laplace));
         end
-        
-        
     end
 end

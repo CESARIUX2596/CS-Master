@@ -2,8 +2,9 @@
 img1 = imread('././imgs/bw/wirebond_mask.png');
 img2 = imread('././imgs/grayscale/building.png');
 img3 = imread('././imgs/color/figures_plane.jpeg');
-img4 = imread('././imgs/color/flower.jpg');
-
+img4 = imread('././imgs/bw/A.png');
+img5 = imread('././imgs/keys_coins/5keys12coin.jpg');
+%img6 = imread('././imgs/grayscale/turbine.png');
 [sobel_x, sobel_y, sobel] = BorderDetector.sobel(img1);
 
 figure('Name', 'Unit3, HW1 Sobel','NumberTitle','off');
@@ -61,20 +62,20 @@ subplot(1,2,2);
 imshow(gradient);
 title('Morphological Gradient');
 
-laplace = BorderDetector.laplace4(img4);
+laplace = BorderDetector.laplace4(img5);
 figure('Name', 'Unit3, HW1 Laplace4','NumberTitle','off');
 subplot(1,2,1);
 title('Original image');
-imshow(img4);
+imshow(img5);
 subplot(1,2,2);
 imshow(laplace);
 title('Laplace4');
 
-laplace = BorderDetector.laplace8(img4);
+laplace = BorderDetector.laplace8(img5);
 figure('Name', 'Unit3, HW1 Laplace8','NumberTitle','off');
 subplot(1,2,1);
 title('Original image');
-imshow(img4);
+imshow(img5);
 subplot(1,2,2);
 imshow(laplace);
 title('Laplace8');
