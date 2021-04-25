@@ -8,7 +8,7 @@
 img1 = imread('././imgs/color/figures_plane.jpeg');
 
 [sobel_x, sobel_y, sobel] = BorderDetector.sobel(img1);
-
+imwrite(sobel, 'sobel.png');
 figure('Name', 'Unit3, HW1 Sobel','NumberTitle','off');
 subplot(2,2,1);
 imshow(img1);
@@ -24,7 +24,7 @@ imshow(sobel_y);
 title('Sobel Y');
 
 [prewitt_x, prewitt_y, prewitt] = BorderDetector.prewitt(img1);
-
+imwrite(prewitt, 'prewitt.png');
 figure('Name', 'Unit3, HW1 Prewitt','NumberTitle','off');
 subplot(2,2,1);
 imshow(img1);
@@ -40,7 +40,7 @@ imshow(prewitt_y);
 title('Prewitt Y');
 
 [roberts_x, roberts_y, roberts] = BorderDetector.roberts(img1);
-
+imwrite(roberts, 'roberts.png');
 figure('Name', 'Unit3, HW1 Roberts','NumberTitle','off');
 subplot(2,2,1);
 imshow(img1);
@@ -56,6 +56,7 @@ imshow(roberts_y);
 title('Roberts Y');
 
 gradient = BorderDetector.morph_gradient(img1);
+imwrite(gradient, 'gradient.png');
 figure('Name', 'Unit3, HW1 Gradient','NumberTitle','off');
 subplot(1,2,1);
 imshow(img1);
@@ -64,25 +65,28 @@ subplot(1,2,2);
 imshow(gradient);
 title('Morphological Gradient');
 
-laplace = BorderDetector.laplace4(img1);
+laplace4 = BorderDetector.laplace4(img1);
+imwrite(laplace4, 'laplace4.png');
 figure('Name', 'Unit3, HW1 Laplace 4','NumberTitle','off');
 subplot(1,2,1);
 imshow(img1);
 title('Original image');
 subplot(1,2,2);
-imshow(laplace);
+imshow(laplace4);
 title('Laplace 4');
 
-laplace = BorderDetector.laplace8(img1);
+laplace8 = BorderDetector.laplace8(img1);
+imwrite(laplace8, 'laplace8.png');
 figure('Name', 'Unit3, HW1 Laplace 8','NumberTitle','off');
 subplot(1,2,1);
 imshow(img1);
 title('Original image');
 subplot(1,2,2);
-imshow(laplace);
+imshow(laplace8);
 title('Laplace 8');
 
 lap_of_gauss = BorderDetector.laplacian_of_gaussian(img1);
+imwrite(lap_of_gauss, 'lap_of_gauss.png');
 figure('Name', 'Unit3, HW1 Laplacian of Gaussian','NumberTitle','off');
 subplot(1,2,1);
 imshow(img1);
@@ -92,6 +96,7 @@ imshow(lap_of_gauss);
 title('Laplacian of Gaussian');
 
 canny = BorderDetector.canny(img1);
+imwrite(canny, 'canny.png');
 figure('Name', 'Unit3, HW1 Canny','NumberTitle','off');
 subplot(1,2,1);
 imshow(img1);
@@ -101,6 +106,7 @@ imshow(canny);
 title('Canny');
 
 zero_crossing = BorderDetector.zero_crossing(img1);
+imwrite(zero_crossing, 'zero_crossing.png');
 figure('Name', 'Unit3, HW1 Zero Crossing','NumberTitle','off');
 subplot(1,2,1);
 imshow(img1);

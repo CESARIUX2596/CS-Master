@@ -92,6 +92,9 @@ classdef BorderDetector
                     roberts(i,j)=sqrt(power(roberts_x(i,j),2)+power(roberts_y(i,j),2));
                 end
             end
+            roberts_x=roberts_x(1:x-1,1:y-1);
+            roberts_y=roberts_y(1:x-1,1:y-1);
+            roberts=roberts(1:x-1,1:y-1);
             roberts_x=(abs(roberts_x))./max(max(roberts_x));
             roberts_y=(abs(roberts_y))./max(max(roberts_y));
             roberts=(abs(roberts))./max(max(roberts));
