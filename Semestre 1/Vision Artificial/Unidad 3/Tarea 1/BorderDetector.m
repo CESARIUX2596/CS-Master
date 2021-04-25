@@ -141,5 +141,31 @@ classdef BorderDetector
             laplace = tmp-laplace;
             laplace=(abs(laplace))./max(max(laplace));
         end
+        
+        function canny = canny (img)
+            try
+                img =rgb2gray(img);
+            end
+            img = double(img);
+            canny = edge(img,'Canny');
+        end
+        
+        function lap_of_gauss = laplacian_of_gaussian(img)
+            try
+                img =rgb2gray(img);
+            end
+            img = double(img);
+            log_filter = fspecial('log',[3,3], 0.5);
+            lap_of_gauss = imfilter(img, log_filter,'symmetric','conv');
+        end
+        
+        function zero_crossed = zero_crossing(img)
+            try
+                img =rgb2gray(img);
+            end
+            img = double(img);
+            zero_crossed = edge(img,'zerocross');
+        end
+        
     end
 end
