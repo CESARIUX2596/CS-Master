@@ -49,8 +49,9 @@ abstract class Payment {
     // Methods
     // Virtual method, but in java all methods are virtual.
     public void print(){
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        System.out.printf("Payment Information:\n\tCurrency: %s\n\t Amount: %.02f\n\t Date: s%\n\t", currency,amount,dtf.format(date));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formatDateTime = date.format(formatter);
+        System.out.printf("\nPayment Information:\n\tCurrency: %s\n\tAmount: %.02f\n\t Date: %s\n\t", currency,amount,formatDateTime);
         System.out.flush();
     }
 
