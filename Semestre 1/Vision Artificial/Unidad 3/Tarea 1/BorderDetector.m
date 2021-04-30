@@ -22,6 +22,7 @@ classdef BorderDetector
                     gradient(i,j) = d1(i,j)+d2(i,j)+d2(i,j)+d4(i,j);
                 end
             end
+            gradient  = gradient(2:x,2:y);
             gradient = (abs(gradient))./max(max(gradient));
         end
         
@@ -36,7 +37,7 @@ classdef BorderDetector
             sobel_x = zeros(x,y);
             sobel_y = zeros(x,y);
             sobel=zeros(x,y);
-            img = padarray(img,[2 2],0,'both'); 
+            img = padarray(img,[2 2],256,'both'); 
             for i=2:x-1
                 for j=2:y-1
                     sobel_x(i,j)=sum(sum(kernel_x.*img(i-1:i+1,j-1:j+1)));
@@ -60,7 +61,7 @@ classdef BorderDetector
             prewitt_x = zeros(x,y);
             prewitt_y = zeros(x,y);
             prewitt=zeros(x,y);
-            img = padarray(img,[2 2],0,'both'); 
+            img = padarray(img,[2 2],256,'both'); 
             for i=2:x-1
                 for j=2:y-1
                     prewitt_x(i,j)=sum(sum(kernel_x.*img(i-1:i+1,j-1:j+1)));
@@ -84,7 +85,7 @@ classdef BorderDetector
             roberts_x = zeros(x,y);
             roberts_y = zeros(x,y);
             roberts=zeros(x,y);
-            img = padarray(img,[2 2],0,'both'); 
+            img = padarray(img,[2 2],256,'both'); 
             for i=1:x-1
                 for j=1:y-1
                     roberts_x(i,j)=sum(sum(kernel_x.*img(i:i+1, j:j+1)));
@@ -92,6 +93,7 @@ classdef BorderDetector
                     roberts(i,j)=sqrt(power(roberts_x(i,j),2)+power(roberts_y(i,j),2));
                 end
             end
+            
             roberts_x=(abs(roberts_x))./max(max(roberts_x));
             roberts_y=(abs(roberts_y))./max(max(roberts_y));
             roberts=(abs(roberts))./max(max(roberts));
@@ -105,7 +107,7 @@ classdef BorderDetector
             tmp = img;
             [x,y]=size(img);
             laplace = zeros(x,y);
-            img = padarray(img,[2 2],0,'both'); 
+            img = padarray(img,[2 2],256,'both'); 
             for i=2:x-1
                 for j=2:y-1
                     laplace(i,j)=img(i,j-1)+img(i-1,j)+img(i+1,j)+ img(i,j+1)-4*img(i,j);
@@ -123,7 +125,7 @@ classdef BorderDetector
             tmp = img;
             [x,y]=size(img);
             laplace = zeros(x,y);
-            img = padarray(img,[2 2],0,'both'); 
+            img = padarray(img,[2 2],256,'both'); 
             for i=2:x-1
                 for j=2:y-1
                     laplace(i,j)= img(i-1,j-1) + img(i,j-1) + img(i+1,j-1)+ img(i-1,j) - 8*(img(i,j)) + img(i+1,j)+ img(i-1,j+1) + img(i,j+1) + img(i+1,j+1);
