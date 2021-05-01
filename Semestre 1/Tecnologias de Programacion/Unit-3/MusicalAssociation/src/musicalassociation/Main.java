@@ -3,7 +3,7 @@ package musicalassociation;
 public class Main {
 
     public static void main(String[] args) {
-        MusicalAssociation laPachanga = new MusicalAssociation();
+        MusicalAssociation laPachanga = new MusicalAssociation("La Pachanga");
         Choir juan = new Choir("Juan",0);
         Choir maria = new Choir("María",1);
         Choir jose = new Choir("José",2);

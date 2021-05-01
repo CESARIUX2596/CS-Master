@@ -7,7 +7,9 @@ public class MusicalAssociation {
     private int numChoirMembers;
     private int numOrchestraMembers;
     private ArrayList<Musician> musicians = new ArrayList<>();
-
+    public MusicalAssociation(String name){
+        this.name = name;
+    }
     public void addMember(Musician mus){
         musicians.add(mus);
         if(((IWhoIs) mus).doYouSing()){
