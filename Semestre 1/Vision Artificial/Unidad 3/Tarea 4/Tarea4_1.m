@@ -1,7 +1,10 @@
+% Detección de Puntos Aislados
 clear all;
 clc;
 img1 = rgb2gray(imread('././imgs/grayscale/chameleon.png'));
 img2 = rgb2gray(imread('././imgs/color/hedgehog.png'));
+%img3 = rgb2gray(imread('././imgs/color/puppy.jpg'));
+
 
 w = [-1 -1 -1; 
      -1 8 -1; 
