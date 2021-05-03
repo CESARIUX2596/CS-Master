@@ -1,8 +1,8 @@
 % Detección de líneas
 clear all;
 clc;
-I = rgb2gray(imread('././imgs/color/lines.jpg'));
-%I = rgb2gray(imread('././imgs/color/vh.jpg'));
+%I = rgb2gray(imread('././imgs/color/lines.jpg'));
+I = rgb2gray(imread('././imgs/color/vh.jpg'));
 %I = rgb2gray(imread('././imgs/grayscale/pcb_xray2.jpg'));
 %I = rgb2gray(imread('././imgs/grayscale/pcb_xray.png'));
 %I = rgb2gray(imread('././imgs/grayscale/aerial.png'));

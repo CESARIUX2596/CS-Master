@@ -1,9 +1,12 @@
+clear all;
+clc;
 Im = rgb2gray(imread('././imgs/color/Cthulhu1.png'));
 T = rgb2gray(imread('././imgs/color/Ctlu.png'));
 
 [m, n] = size(Im);
 Imd=double(Im);
 Td = double(T);
+[mt,nt] = size(T);
 Itemp=zeros(size(T));
 % dm = zeros(m-mt,n-nt);
 for re=1:m-mt
@@ -17,4 +20,17 @@ for re=1:m-mt
         dm(re,co)=max(max(Itemp));
     end
 end
-imshow(dm);
+normImage = mat2gray(dm);
+%imshow(normImage)
+
+figure('Name', 'Unit3, Maximo de las Diferencias','NumberTitle','off');
+subplot(2,2,1);
+imshow(Im);
+title('Original Image');
+subplot(2,2,2);
+imshow(T);
+title('Pattern');
+
+subplot(2,2,4);
+imshow(normImage);
+title('Maximo de las Diferencias');
