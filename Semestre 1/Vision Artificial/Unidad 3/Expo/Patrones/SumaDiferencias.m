@@ -1,7 +1,9 @@
 clear all;
 clc;
-Im = rgb2gray(imread('././imgs/color/Cthulhu1.png'));
-T = rgb2gray(imread('././imgs/color/Ctlu.png'));
+% Im = rgb2gray(imread('././imgs/color/Cthulhu1.png'));
+% T = rgb2gray(imread('././imgs/color/Ctlu.png'));
+Im = rgb2gray(imread('././imgs/color/raport_rosa-original.png'));
+T = rgb2gray(imread('././imgs/color/pattern.png'));
 
 %Im = rgb2gray(imread('././imgs/pattern_recognition/img1.jpg'));
 %T = rgb2gray(imread('././imgs/pattern_recognition/p1.jpg'));
