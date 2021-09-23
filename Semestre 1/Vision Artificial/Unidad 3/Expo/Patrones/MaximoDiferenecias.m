@@ -1,9 +1,17 @@
 clear all;
 clc;
+<<<<<<< HEAD
 % Im = rgb2gray(imread('././imgs/color/Cthulhu1.png'));
 % T = rgb2gray(imread('././imgs/color/Ctlu.png'));
 Im = rgb2gray(imread('././imgs/color/flower.jpg'));
 T = rgb2gray(imread('././imgs/color/flower_crpt.jpg'));
+=======
+%Im = rgb2gray(imread('././imgs/color/Cthulhu1.png'));
+%T = rgb2gray(imread('././imgs/color/Ctlu.png'));
+Im = rgb2gray(imread('././imgs/color/raport_rosa-original.png'));
+T = rgb2gray(imread('././imgs/color/pattern.png'));
+
+>>>>>>> d8a051b3e2e806fa28bfcc675c099b7cae4b4e1c
 [m, n] = size(Im);
 Imd=double(Im);
 Td = double(T);

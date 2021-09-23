@@ -1,0 +1,1 @@
+INSERT INTO aitunes.out_of_stock_products (product_id, out_of_stock_date) VALUES (13, '2021-06-01');
