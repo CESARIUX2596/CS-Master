@@ -79,20 +79,9 @@ def variance_calc(lis, mean, prob):
 def standar_dev(variance):
     return math.sqrt(variance)
 
+def find_x_value_z_score(miu,z,sigma):
+    return miu + z*sigma
 
-b0 = binomial(6, 0.85, 0)
-b1 = binomial(6, 0.85, 1)
-b2 = binomial(6, 0.85, 2)
-b3 = binomial(6, 0.85, 3)
-b4 = binomial(6, 0.85, 4)
-b5 = binomial(6, 0.85, 5)
-b6 = binomial(6, 0.85, 6)
 
-l = [b0, b1, b2, b3, b4, b5, b6]
-count = 0
-for i in l:
-    print(count, " ", i)
-    count += 1
-print(l)
 
-print(binomial(100, .67, 75))
+print(find_x_value_z_score(50,1.28,10))
