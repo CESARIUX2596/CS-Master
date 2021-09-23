@@ -1,8 +1,9 @@
 clear all;
 clc;
-Im = rgb2gray(imread('././imgs/color/Cthulhu1.png'));
-T = rgb2gray(imread('././imgs/color/Ctlu.png'));
-
+% Im = rgb2gray(imread('././imgs/color/Cthulhu1.png'));
+% T = rgb2gray(imread('././imgs/color/Ctlu.png'));
+Im = rgb2gray(imread('././imgs/color/flower.jpg'));
+T = rgb2gray(imread('././imgs/color/flower_crpt.jpg'));
 %Im = rgb2gray(imread('././imgs/pattern_recognition/img1.jpg'));
 %T = rgb2gray(imread('././imgs/pattern_recognition/p1.jpg'));
 
@@ -29,7 +30,7 @@ end
 normImage = mat2gray(da);
 %imshow(normImage)
 
-figure('Name', 'Unit3, Suma de Distancias','NumberTitle','off');
+figure('Name', 'Unit3, Suma de las Diferencias','NumberTitle','off');
 subplot(2,2,1);
 imshow(Im);
 title('Original Image');
@@ -39,4 +40,4 @@ title('Pattern');
 
 subplot(2,2,4);
 imshow(normImage);
-title('Suma de Distancias');
+title('Suma de Diferencias');

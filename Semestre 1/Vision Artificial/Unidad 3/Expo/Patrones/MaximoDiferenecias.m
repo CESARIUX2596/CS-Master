@@ -1,8 +1,9 @@
 clear all;
 clc;
-Im = rgb2gray(imread('././imgs/color/Cthulhu1.png'));
-T = rgb2gray(imread('././imgs/color/Ctlu.png'));
-
+% Im = rgb2gray(imread('././imgs/color/Cthulhu1.png'));
+% T = rgb2gray(imread('././imgs/color/Ctlu.png'));
+Im = rgb2gray(imread('././imgs/color/flower.jpg'));
+T = rgb2gray(imread('././imgs/color/flower_crpt.jpg'));
 [m, n] = size(Im);
 Imd=double(Im);
 Td = double(T);
