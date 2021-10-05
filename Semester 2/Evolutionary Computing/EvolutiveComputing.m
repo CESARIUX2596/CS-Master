@@ -1,1 +1,0 @@
-plotobjective(@rastriginsfcn,[-5.12,5.12;-5.12,5.12]);
