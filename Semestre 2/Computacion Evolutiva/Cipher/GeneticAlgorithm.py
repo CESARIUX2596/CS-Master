@@ -97,17 +97,18 @@ class GeneticAlgorithm():
         print(self.population[0].chromosome)
         self.create_new_generation()
         self.mutate_individuals()
-        self.gen_count += 1
+        # self.gen_count += 1
         found = False
         while not found:
             self.evaluate_population()
             print("Current Value:", self.population[0].chromosome,
-                  "Fitnes:", self.population[0].fitness_value, )
+                  "Fitnes:", self.population[0].fitness_value, "Generation",  self.gen_count)
 
             self.create_new_generation()
             self.mutate_individuals()
             self.gen_count += 1
             if self.population[0].fitness_value == 0:
                 found = True
+                break
 
         print("DONE")
