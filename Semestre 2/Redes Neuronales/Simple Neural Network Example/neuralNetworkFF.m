@@ -12,6 +12,9 @@ net = feedforwardnet(netconf);
 % net = traingd(net,x,y);  % Gradient Descent
 net = traingdm(net,x,y); % Gradient Descent Momentum
 
+net.trainparam.lr=0.5;
+net.trainParam.epochs=5000;
+
 y_pred = net(x);
 plot(x,y_pred,'linewidth',0.5);
 perf = perform(net,y_pred,y)
